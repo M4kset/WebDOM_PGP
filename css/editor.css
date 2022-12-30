@@ -1,0 +1,213 @@
+#level-validation{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    height: 2vw;
+    width: 2vw;
+    background-color: #00ff00;
+    border-radius: 30%;
+    border: 0.25vw solid #fff;
+}
+
+#editor_container{
+    width: 75vw;
+    height: 40vw;
+    margin: 3vh auto;
+    margin-bottom: 16vw;
+    position: relative;
+}
+
+#Most_editor{
+    width: 75vw;
+    height: 40vw;
+    position: relative;
+}
+
+#current_col{
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    background-color: #fff;
+    border-radius: 30%;
+    border: 0.25vw solid #fff;
+}
+
+.ub_btns{
+    width: 80%;
+    margin: 0 auto;
+    height: 10%;
+    display:block;
+    cursor: pointer;
+}
+
+#mid_section{
+    height: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mid_btns{
+    width: 10%;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+}
+
+#lvl_edge{
+    background-color: #a5a5a5;
+    display: inline-block;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+
+.square{
+    background-color: white;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 20%;
+    position: absolute;
+    cursor: pointer;
+}
+
+#color_bar{
+    margin: 2vh auto;
+    height: fit-content;
+    width: fit-content;
+}
+
+#color_bar button{
+    width: 4vw;
+    height: 4vw;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 30%;
+    border: 0.5vw solid #fff;
+}
+
+#data_string{
+    text-align: center;
+    font-size: 1.75vw;
+    max-width: 95vw;
+    width: 95vw;
+    height: 8vw;
+    display: block;
+    margin: 5vh auto;
+}
+
+.magnifier{
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    background-color: #fff;
+    border-radius: 30%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*error message*/
+
+#inv_mss_cont{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: fixed;
+    display: none;
+}
+
+#all_container{
+    margin: 4vh auto;
+    width: 60vw;
+    padding: 1vw;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#all_container h2{
+    font-size: 5vw;
+    margin: 2vh auto;
+    color: #ff0000;
+    text-align: center;
+}
+
+#all_container p{
+    font-size: 2vw;
+    font-weight: bold;
+    width: 85%;
+    margin: 2vh auto;
+    text-align: center;
+}
+
+#btn_container{
+    margin: 3vw auto;
+    width: fit-content
+}
+
+#btn_container button{
+    display: inline-block;
+    padding: 1vw;
+    font-size: 2vw;
+    margin: 2vh auto;
+    margin: 2vh;
+    cursor: pointer;
+}
+
+#RC{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    padding: 0.5vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+/*Random mssg*/
+
+#RC_back{
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+}
+
+#RC_warn{
+    position: relative;
+    display: block;
+    margin: 12vh auto;
+    width: 55%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#RC_warn div{
+    margin: 2vh auto;
+    text-align: center;
+    width: fit-content
+}
+
+#RC_warn button{
+    font-size: 3vh;
+    padding: 0.5vh;
+    display: inline-block;
+    margin: 2vh;
+    cursor: pointer;
+}
+
+#RC_warn h2{
+    margin: 5vh auto;
+    text-align: center;
+    width: 75%;
+    font-size: 2vw;
+    font-weight: normal;
+}

@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+body{
+    background-image: url(../background.png);
+    image-rendering: pixelated;
+    background-size: 25%;
+    background-repeat:repeat;
+}
+
+#screen{
+    margin: 0 auto;
+    margin-top: 4vh;
+    width: 75vw;
+    height: 40vw;
+    display: block;
+    background-color: #fff;
+    overflow: hidden; /*Changing*/
+    position: relative;
+}
+
+#menu{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 1;
+}
+
+#title{
+    text-align: center;
+    margin: 6vw 0;
+    margin-bottom: 4vw;
+    color: #fff;
+    font-size: 5vw;
+}
+
+#menu_btns_cont{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#menu_btns_cont button{
+    width: 20vw;
+    display: block;
+    margin: 0vw auto;
+    margin-bottom: 0.75vw;
+    padding: 1vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+/*Levels*/
+
+#menu_lvls {
+    display: none;
+    position: relative;
+}
+
+#back{
+    position:absolute;
+    top: 0vw;
+    left: 2vw;
+    font-size: 2vw;
+    height: 4vw;
+    width: 4vw;
+    cursor: pointer;
+}
+
+#title_lvls{
+    text-align: center;
+    margin: 1.75vw 0;
+    color: #fff;
+    font-size: 3vw;
+    font-weight: normal;
+}
+
+#lvl_container{
+    width: 80%;
+    margin: 0vw auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.lvl{
+    margin: 0.25vw auto;
+    display: inline-block;
+    font-size: 2vw;
+    padding: 0.5vw;
+    cursor: pointer;
+}
+
+/*Game events*/
+
+#fail{
+    display: none;
+}
+
+#win{
+    display: none;
+}
+
+.Gm_Evt_Ttl{
+    text-align: center;
+    margin: 7vw 0;
+    color: #fff;
+    font-size: 5vw;
+    font-weight: bold;
+}
+
+.Gm_Evt_btns_cont{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.Gm_Evt_btns_cont button{
+    margin: 0 auto;
+    margin: 5vw 0;
+    padding: 1vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+/*Mobile btns*/
+
+.Mbtn{
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    font-size: 2vw;
+    cursor: pointer;
+    background-color: rgba(189, 189, 189, 0.5);
+    z-index: 3;
+}
+
+#MLeft{
+    bottom: 0;
+    left: 0;
+}
+
+#MRight{
+    bottom: 0;
+    left: 10vw;
+}
+
+#MUp{
+    bottom: 10vw;
+    right: 0;
+}
+#MDown{
+    bottom: 0vw;
+    right: 0;
+}
+
+/*Other configurations/Details*/
+
+#other_cont{
+    margin: 2vw auto;
+    margin-top: 8vw;
+    width: fit-content
+}
+
+#other_cont button{
+    font-size: 2vw;
+    cursor: pointer;
+    padding: 0.5vw;
+}
+
+#editor_mask{
+    margin: 0 2vw;
+    display: inline-block;
+}
+
+#editor_mask button{
+    display: inline-block;
+}

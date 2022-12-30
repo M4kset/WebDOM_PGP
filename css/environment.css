@@ -1,0 +1,100 @@
+#game_gui{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+#cancel_gm{
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+    font-size: 2vw;
+    padding: 0.5vw;
+    cursor: pointer;
+}
+
+#retry_gm{
+    position: absolute;
+    left: 8vw;
+    top: 1vw;
+    font-size: 2vw;
+    padding: 0.5vw;
+    cursor: pointer;
+}
+
+#pos_container{
+    position: absolute;
+    top: 6vw;
+    left: 1vw;
+}
+
+#pos_container p{
+    font-size: 2vw;
+    font-weight: bold;
+    -webkit-text-stroke: 0.0625vw #ffffff;
+    display: inline-block;
+}
+
+#lvl_name{
+    position: absolute;
+    right: 1vw;
+    top: 0.75vw;
+    font-size: 2vw;
+    font-weight: bold;
+    -webkit-text-stroke: 0.0625vw #ffffff;
+}
+
+#KC{
+   margin: 1vw auto;
+   text-align: center;
+}
+
+#KI{
+    width: 3vw;
+    height: 3vw;
+    background-color: rgb(255, 238, 0);
+    display: inline-block;
+}
+
+#keycount{
+    position: relative;
+    top: -0.35vw;
+    display: inline-block;
+    font-size: 3vw;
+    font-weight: bold;
+    -webkit-text-stroke: 0.0625vw #ffffff;
+}
+
+/*game*/
+
+#environment{
+    margin: 0;
+    position: relative;
+    height:100%;
+    width: 100%;
+}
+
+#squares_container{
+    height:100%;
+    width: 100%;
+    position: absolute;
+}
+
+#player{
+    width: 3vw;
+    height: 3vw;
+    background-color: #ff8800;
+    position: absolute;
+    left: 33.5vw;
+    bottom: 32.5%;
+}
+
+.block{
+    width: 8vw;
+    height: 8vw;
+    position: absolute;
+    left: 1.5vw;
+    bottom: 0vw;
+}

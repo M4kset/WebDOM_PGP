@@ -1,0 +1,1 @@
+On the 11th of December of 2022, a blackout happened, so to kill time, I decided to start this project, it took me a whole week plus 3 days. (the blackout just lasted 1 day but I was enjoying making the game, so I decided to finish it)

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+    <head>
+        <title>PlatformGame</title>
+        <link rel="stylesheet" href="css/TC.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/editor.css">
+        <link rel="stylesheet" href="css/environment.css">
+        <link rel="icon" type="image/x-icon" href="logo.png">
+    </head>
+
+    <body>
+        <div id="level-validation"></div>
+
+        <div id="inv_mss_cont">
+            <div id="all_container">
+                <h2>!</h2>
+                <p>
+                    Illegal level, trying to visualize it may lead 
+                    to incorrect results and unexpected behaviour, 
+                    <br>
+                    make sure you are using a valid level syntax, 
+                    playability will be disabled until a valid 
+                    syntax level is entered.
+                </p>
+                <div id="btn_container">
+                    <button id="forward_error">Continue anyway</button>
+                    <button id="reset_lvl">Reset to default</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen" mode="0">
+            <div id="menu">
+                <div id="menu_start">
+                    <h2 id="title">Platform Game Prototype</h2>
+                    <div id="menu_btns_cont">
+                        <button id="just_play">Play</button>
+                        <button id="to_levels">Level selection</button>
+                        <button id="use_custom">Use custom</button>
+                    </div>
+                </div>
+                <div id="menu_lvls">
+                    <button id="back"><</button>
+                    <h2 id="title_lvls">Select a level</h2>
+                    <div id="lvl_container">
+                        <button id="1" class="lvl">Broken window</button>
+                        <button id="2" class="lvl">Curiosity</button>
+                        <button id="3" class="lvl">Ducts</button>
+                        <button id="4" class="lvl">Dark Depot</button>
+                        <button id="5" class="lvl">Next floor</button>
+                        <button id="6" class="lvl">The pit</button>
+                        <button id="7" class="lvl">Intruders beware</button>
+                        <button id="8" class="lvl">The mirrow to outside</button>
+                        <button id="9" class="lvl">Air maneuver</button>
+                        <button id="10" class="lvl">Urbanity</button>
+                        <button id="11" class="lvl">The walk to the sewers</button>
+                        <button id="12" class="lvl">Underwater life</button>
+                        <button id="13" class="lvl">Yesterday's face</button>
+                        <button id="14" class="lvl">Jungled forest</button>
+                        <button id="15" class="lvl">The cave</button>
+                        <button id="16" class="lvl">Grass after rain</button>
+                        <button id="17" class="lvl">Farthest park</button>
+                        <button id="18" class="lvl">Neighborhood</button>
+                        <button id="19" class="lvl">Was my home?</button>
+                        <button id="20" class="lvl">Little visit</button>
+                        <button id="21" class="lvl">Break on</button>
+                        <button id="22" class="lvl">Pink house</button>
+                        <button id="23" class="lvl">Secured yard</button>
+                        <button id="24" class="lvl">The mansion</button>
+                        <button id="25" class="lvl">Bizzare paintings</button>
+                        <button id="26" class="lvl">Outside doors</button>
+                        <button id="27" class="lvl">Compact</button>
+                        <button id="28" class="lvl">Beyond nowhere </button>
+                    </div>
+                </div>
+                <div id="fail">
+                    <h2 class="Gm_Evt_Ttl">Failure :(</h2>
+                    <div class="Gm_Evt_btns_cont">
+                        <button id="retry">Try again</button>
+                        <button id="gomenuF">Go to menu</button>
+                    </div>
+                    
+                </div>
+                <div id="win">
+                    <h2 class="Gm_Evt_Ttl" id="endtitle">Success!</h2>
+                        <div class="Gm_Evt_btns_cont">
+                        <button id="ntxlvl">Next Level</button>
+                        <button id="gomenuW">Go to menu</button>
+                    </div>
+                </div>
+            </div>
+            <div id="game_gui">
+                <button id="cancel_gm">Exit</button>
+                <button id="retry_gm">Retry</button>
+                <div id="KC">
+                    <div id="KI"></div>
+                    <p id="keycount">: 0</p>
+                </div>
+                <div id="mobile_ctrls">
+                    <button id="MLeft" class="Mbtn"><</button>
+                    <button id="MRight"class="Mbtn">></button>
+                    <button id="MUp" class="Mbtn">^</button>
+                    <button id="MDown" class="Mbtn">v</button>
+                </div>
+                <div id="pos_container">
+                    <p id="playerX">x: x</p>
+                    <p id="playerY">y: y</p>
+                </div>
+                <p id="lvl_name">Level ?</p>
+            </div>
+            <div id="environment">
+                <div id="squares_container"></div>
+            </div>
+            
+        </div>
+
+        <div id="editor_container">
+            <div id="other_cont">
+                <div id="editor_mask">
+                    <button id="HideE">Hide editor</button>
+                    <button id="ShowE">Show editor</button>
+                </div>
+                <button id="RE">Reset editor</button>
+                <button id="OpenTC">Open TC</button>
+            </div>
+
+            <div id="Most_editor">
+                <div id="current_col" type="0"></div>
+                <button id="zoomout" class="magnifier" style="right: 0; top: -3vw;">-</button>
+                <button id="dec_h" class="ub_btns">-</button>
+                <div id="mid_section">
+                    <button id="dec_w" class="mid_btns">-</button>
+                    <div id="lvl_edge">
+                    </div>
+                    <button id="in_w" class="mid_btns" style="float: right;">+</button>
+                </div>
+                <button id="in_h" class="ub_btns">+</button>
+                <button id="zoomin" class="magnifier" style="bottom: -3vw;">+</button>
+            </div>
+
+            <div id="color_bar">
+                <button id="0" style="background-color:white"></button>
+                <button id="1" style="background-color:#ffad50"></button>
+                <button id="2" style="background-color:#80d7ff"></button>
+                <button id="3" style="background-color:#c7c7c7"></button>
+                <button id="4" style="background-color:rgb(235, 0, 0)"></button>
+                <button id="5" style="background-color:rgb(97, 139, 255)"></button>
+                <button id="6" style="background-color:rgb(0, 200, 0)"></button>
+                <button id="7" style="background-color:rgb(139, 109, 54)"></button>
+                <button id="8" style="background-color:rgb(255, 238, 0)"></button>
+                <button id="9" style="background-color:#757575"></button>
+                <button id="10" style="background-color:rgb(0, 129, 0)"></button>
+                <button id="11" style="background-color:rgb(112, 17, 141)"></button>
+                <button id="12" style="background-color:rgb(255, 140, 249)"></button>
+                <button id="13" style="background-color:rgb(161, 235, 24)"></button>
+                <button id="14" style="background-color:#000000"></button>
+            </div>
+        </div>
+
+        <textarea id="data_string" placeholder="Level data"></textarea>
+
+        <button id="RC">Randomize custom</button>
+
+        <div id="RC_back">
+            <div id="RC_warn">
+                <h2>
+                    This action will erase any previous level data
+                    in the editor and replace it with randomly 
+                    generated values, are you sure you want to proceed?
+                </h2>
+
+                <div>
+                    <button id="Randomize">Continue</button>
+                    <button id="RC_close">Cancel</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="TC_Background">
+            <div id="TC">
+                <div id="TC_header">
+                    <h2>Tile clasification</h2>
+                    <button id="CloseTC">X</button>
+                </div>
+
+                <div id="TC_container">
+                    <table id="tilesTC">
+                        <tr>
+                            <th><h3>Color</h3></th>
+                            <th><h3>Name</h3></th>
+                            <th><h3>Description</h3></th>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC0"></div></td>
+                            <td>
+                                <p>Air</p>
+                            </td>
+                            <td>
+                                <p>
+                                    Just air, nothing very special about it.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC1"></div></td>
+                            <td><p></p>Spawn</p></td>
+                            <td>
+                                <p>
+                                Also known as spawn point, what it does is pretty
+                                straight forward, if multiple spawns are set in a level,
+                                the game will choose one of them randomly every time the 
+                                game is started, and then the game coordinates will 
+                                be normalized to zero starting from the given spawn.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC2"></div></td>
+                            <td><p>Goal</p></td>
+                            <td>
+                                <p>Once reached, the level is considered complete.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC3"></div></td>
+                            <td><p>Concrete</p></td>
+                            <td>
+                                <p>The solid platform you have been waiting for.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC4"></div></td>
+                            <td><p>Ouch / Kill / Red spike / Lava</p></td>
+                            <td><p>That gotta hurt, never touch that again.</p></td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC5"></div></td>
+                            <td><p>Liquid / Water</p></td>
+                            <td>
+                                <p>
+                                    Its density makes you fall more slowly and of course it
+                                    gives you the capacity of <del>jumping</del> swimming in it.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC6"></div></td>
+                            <td><p>Climbable Plant</p></td>
+                            <td>
+                                <p>
+                                    Gives you ability to move freely in both axis, 
+                                    the downsides are that you can't jump from 
+                                    it so easily and it reduces your movement.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC7"></div></td>
+                            <td><p>Door</p></td>
+                            <td>
+                                <p>
+                                    Blocks the access to other areas in a level, 
+                                    wanting to pass? get a key. <i>(Don't confuse 
+                                    with dirt, using a key on dirt will give you a dirty key)</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC8"></div></td>
+                            <td><p>Key</p></td>
+                            <td>
+                                <p>
+                                    It might not look like a key, but with one of these,
+                                    you can open any door in a level. <strong>[These are not saved 
+                                    between levels]</strong> <i>(Don't confuse them with flowers, 
+                                    you can't open doors with flowers)</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC9"></div></td>
+                            <td><p>Background / Wall / Dark Concrete</p></td>
+                            <td>
+                                <p>
+                                    Is the background a little bit sad for you? Don't panic,
+                                    with these you can finally fill those gaps in your house,
+                                    <del>even though opening doors and collecting keys create more
+                                    gaps.</del>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC10"></div></td>
+                            <td><p>Background Plant</p></td>
+                            <td>
+                                <p>
+                                    Some greenery for the background, simple as that.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC11"></div></td>
+                            <td><p>Purple concrete</p></td>
+                            <td>
+                                <p>
+                                    An alternative to walking on gray concrete and doors, 
+                                    is just painted solid concrete, but has more charm than air.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC12"></div></td>
+                            <td><p>Pink background / Pink concrete</p></td>
+                            <td>
+                                <p>
+                                    Intended for those who wanted pink. <i>(this can be used as 
+                                    flowers, despite not being flowers technically)</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC13"></div></td>
+                            <td><p>Grass</p></td>
+                            <td>
+                                <p>
+                                    If you wanted to step on something more eco-friendly and
+                                    place plants without getting something oddly looking, 
+                                    this is the choice for you.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="TCB" id="TC14"></div></td>
+                            <td><p>Black concrete / Original concrete</p></td>
+                            <td>
+                                <p>
+                                    In the development process, concrete was the first block 
+                                    to get implemented and was originally black, but was changed 
+                                    to gray since it didn't look good back then, the whole level 
+                                    palette was tweaked to get along the new color, and now, to avoid 
+                                    having black as just a memory from past days, and because I really
+                                    liked black from the very start but it didn't get along with the old
+                                    palette and now it does, black is back.
+                                </p>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="js/globalvar.js"></script>
+    <script type="text/javascript" src="js/lvl_list.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/level.js"></script>
+    <script type="text/javascript" src="js/editor.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/OC_TC.js"></script>
+
+</html>
