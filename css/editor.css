@@ -98,6 +98,18 @@
     margin: 5vh auto;
 }
 
+#DAS{
+    margin: 0 auto;
+    margin-bottom: 2vw;
+    width: fit-content;
+}
+
+#DAS button{
+     display: inline-block;
+     font-size: 2vw;
+     padding: 1.5vw;
+}
+
 .magnifier{
     position: absolute;
     width: 4vw;
