@@ -9,3 +9,4 @@ var MainLvlPlayerIsIn = 0
 var Keys = []
 var DigitalKeyCount = 0
 var Doors = []
+var DAS = 8

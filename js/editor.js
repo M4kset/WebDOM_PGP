@@ -20,6 +20,9 @@ var zoomout = document.getElementById('zoomout');
 
 var inv_mss_cont = document.getElementById('inv_mss_cont');
 
+var IDAS = document.getElementById("IDAS")
+var DDAS = document.getElementById("DDAS")
+
 var figsize = 4;
 
 var lvlsizex = 10
@@ -325,6 +328,15 @@ function rearrange(axis,change){
     validate_level(lvlsizex,lvlsizey)
 }
 
+function ChangeDAS(newval){
+     if(newval >=8){
+           data_string.style.height = newval + "vw"
+     }
+     else{
+           DAS = 8
+     }
+}
+
 in_h.addEventListener("click",function(){
     rearrange(1,1)
 })
@@ -343,3 +355,37 @@ dec_w.addEventListener("click",function(){
 
 default_build()
 validate_level(lvlsizex,lvlsizey)
+ChangeDAS(8)
+
+IDAS.addEventListener("click",function(){
+    if(DAS < 12){
+        DAS++
+    }
+    else if(DAS>=12){
+        DAS+=10
+    }
+    else if(DAS>=100 && DAS < 1000){
+        DAS+=100
+    }
+    else if(DAS>1000){
+         DAS+=1000    
+    }
+    
+    ChangeDAS(DAS)
+})
+
+DDAS.addEventListener("click",function(){
+     if(DAS < 12){
+        DAS--
+    }
+    else if(DAS>=12){
+        DAS-=10
+    }
+    else if(DAS>=100 && DAS < 1000){
+        DAS-=100
+    }
+    else if(DAS>1000){
+         DAS-=1000    
+    }
+    ChangeDAS(DAS)
+})
