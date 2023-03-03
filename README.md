@@ -67,5 +67,10 @@ One of the core features of PGP is the capability of the user to make levels as 
   </strong>
 </p>
 
+## Getting started 
+1. Download/Copy this repository/project to your device. (Will appear as a Zip or RAR file)
+2. Extract the files to the directory of your like.
+3. Open the "index.html" file and enjoy the ride.
+
 ## Notes
-* The graphical mode on the editor is going to slow down the page responsiveness if a level is too big, and the only way to fix that is to implement a custom scroll modality or something doing a similar thing as the game screen, and with that the possibility of adding a more complex editor that allows you to paint complex forms and edit a level more easily, thing that would take me a lot of time to do, it's not that I'm lazy (possibly), but the "show and hide editor buttons" already take care of the slow proccesing with big levels, and I'm exhausted of making the project, maybe in an update I could take care of that or something, who knows.
+* The graphical mode on the editor is going to slow down the page responsiveness if a level is too big, and the only way to fix that is to implement a custom scroll modality or something doing a similar thing as the game screen, and with that the possibility of adding a more complex editor that allows you to paint complex forms and edit a level more easily, thing that would take me a lot of time to do, it's not that I'm lazy (possibly), but the "show and hide editor buttons" already take care of the slow processing with big levels, and I'm exhausted of making the project, maybe in an update I could take care of that or something, who knows.
